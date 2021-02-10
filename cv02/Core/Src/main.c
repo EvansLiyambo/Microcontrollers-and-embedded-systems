@@ -46,7 +46,7 @@ void EXTI0_1_IRQHandler(void)
 
 
 		if (Tick > delay + LED_TIME_BLINK) {
-			GPIOA->ODR =(1<<4);
+			GPIOA->ODR ^=(1<<4);
 			delay = Tick;
 		}
 	}
